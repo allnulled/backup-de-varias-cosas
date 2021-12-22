@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RatasDB</title>
+    <script src="jquery.min.js"></script>
+    <script src="qunit.min.js"></script>
+    <script src="../dist/ratasdb.standalone.js"></script>
+    <link rel="stylesheet" href="qunit.css" />
+</head>
+
+<body>
+    <h1>RatasDB</h1>
+    <div id="app"></div>
+    <div id="qunit"></div>
+    <script>
+
+        QUnit.module("RatasDB", function () {
+            QUnit.test("Unique test for everything", function (assert) {
+                const finishTest = assert.async(1);
+                RatasDB.Dexie.delete("BaseDeDatos1").finally(async () => {
+                    try {
+                        const db = RatasDB.createDatabase({
+                            name: "BaseDeDatos1",
+                            version: 1,
+                            schema: {
+                                "globals": {
+                                    "DatabaseHost": "127.0.0.1", "DatabasePort": 3306, "DatabasePassword": "toor", "DatabaseUser": "root"
+                                },
+                                "schema": {
+                                    "tables": {
+                                        "imagen": {
+                                            "columns": {
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "label": "Nombre de la imagen:",
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "label": "Hipervínculo de la imagen:"
+                                                },
+                                                "contenido": {
+                                                    "type": "file",
+                                                    "label": "Contenido de la imagen:",
+                                                    "index": false,
+                                                }
+                                            }
+                                        },
+                                        "usuario": {
+                                            "columns": {
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "label": "Nombre de usuario:"
+                                                },
+                                                "grupos": {
+                                                    "type": "list:grupo",
+                                                    "label": "Grupos a los que pertenece el usuario:"
+                                                },
+                                                "privilegios": {
+                                                    "type": "list:privilegio",
+                                                    "label": "Privilegios específicos del usuario:"
+                                                },
+                                                "imagen": {
+                                                    "type": "object:imagen",
+                                                    "label": "Imagen de perfil del usuario:"
+                                                }
+                                            }
+                                        },
+                                        "grupo": {
+                                            "columns": {
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "label": "Nombre de grupo:"
+                                                },
+                                                "privilegios": {
+                                                    "type": "list:privilegio",
+                                                    "label": "Privilegios específicos del usuario:"
+                                                },
+                                                "descripcion": {
+                                                    "type": "text",
+                                                    "label": "Descripción del grupo:"
+                                                }
+                                            }
+                                        },
+                                        "privilegio": {
+                                            "columns": {
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "label": "Nombre de privilegio:"
+                                                }, "descripcion": {
+                                                    "type": "text",
+                                                    "label": "Descripción del privilegio:"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
+
+                        window.db = db;
+
+                        // IMAGENES:
+                        await db.insert("imagen", { nombre: "Una imagen de Google", url: "https://www.google.com/logos/doodles/2021/seasonal-holidays-2021-6753651837109324-6752733080595603-cst.gif" })
+                        await db.insert("imagen", { nombre: "Otra imagen de Google", url: "https://sustainability.google/static/images/google-gleaf.gif" })
+
+                        // GRUPOS:
+                        await db.insert("grupo", { nombre: "Morenos" });
+                        await db.insert("grupo", { nombre: "Hombres" });
+                        await db.insert("grupo", { nombre: "Mujeres" });
+                        await db.insert("grupo", { nombre: "Rubios" });
+                        await db.insert("grupo", { nombre: "Humanos" });
+                        await db.insert("grupo", { nombre: "Plantas" });
+                        await db.insert("grupo", { nombre: "Programadores" });
+
+                        // PRIVILEGIOS:
+                        await db.insert("privilegio", { nombre: "Cantar" });
+                        await db.insert("privilegio", { nombre: "Bailar" });
+                        await db.insert("privilegio", { nombre: "Saltar" });
+                        await db.insert("privilegio", { nombre: "Correr" });
+                        await db.insert("privilegio", { nombre: "Volar" });
+                        await db.insert("privilegio", { nombre: "Planear" });
+                        await db.insert("privilegio", { nombre: "Gruñir" });
+
+                        // USUARIO:
+                        const usuarioId = await db.insert("usuario", {
+                            nombre: "Carlos 1",
+                            imagen: 1,
+                            privilegios: [1, 2, 3, 4, 7],
+                            grupos: [1, 2, 5, {
+                                id: 7,
+                                categoria: "Desarrollo web",
+                                lenguajes: ["HTML", "CSS", "JavaScript", "Node.js", "PHP", "Java"],
+                            }],
+                        });
+
+                        // @TEST: check that 'insert' inserts main item
+                        // @TEST: check that 'insert' inserts also intermediate relationships items
+                        const allData1 = await db.dexieDB.listof_privilegios_of_usuario.toArray();
+                        assert.equal(Array.isArray(allData1), true, "[INSERT] creates intermediate table 1");
+                        assert.equal(allData1.length, 5, "[INSERT] inserts intermediate items 1");
+                        const allData2 = await db.dexieDB.listof_grupos_of_usuario.toArray();
+                        assert.equal(Array.isArray(allData2), true, "[INSERT] creates intermediate table 2");
+                        assert.equal(allData2.length, 4, "[INSERT] inserts intermediate items 2");
+
+                        // @TEST: check that 'delete' deletes main item
+                        // @TEST: check that 'delete' deletes also intermediate relationships items
+                        const deleteResult = await db.delete("usuario", usuarioId);
+                        const allData3 = await db.dexieDB.listof_privilegios_of_usuario.toArray();
+                        assert.equal(Array.isArray(allData3), true, "[DELETE] deletes intermediate table 1");
+                        assert.equal(allData3.length, 0, "[DELETE] deletes intermediate items 1");
+                        const allData4 = await db.dexieDB.listof_grupos_of_usuario.toArray();
+                        assert.equal(Array.isArray(allData4), true, "[DELETE] deletes intermediate table 2");
+                        assert.equal(allData4.length, 0, "[DELETE] deletes intermediate items 2");
+
+                        // @TEST: check that 'update' updated main item
+                        const usuarioId2 = await db.insert("usuario", {
+                            nombre: "Carlos 2",
+                            privilegios: [1, 2, 3, 4, 7],
+                            grupos: [1, 2, 5, {
+                                id: 7,
+                                categoria: "Desarrollo web",
+                                lenguajes: ["HTML", "CSS", "JavaScript", "Node.js", "PHP", "Java"],
+                            }],
+                        });
+                        const updateResult = await db.update("usuario", usuarioId2, {
+                            nombre: "Carlos 3",
+                            imagen: 2,
+                            privilegios: [2, {
+                                id: 4,
+                                tipo: "Media maratón y apurao",
+                            }, 7],
+                            grupos: [2, 6, 5]
+                        });
+                        const allData5 = await db.dexieDB.usuario.toArray();
+                        assert.equal(Array.isArray(allData5), true, "[UPDATE] updates main table (1)");
+                        assert.equal(allData5.length, 1, "[UPDATE] updates main table (2)");
+                        assert.equal(allData5[0].nombre, "Carlos 3", "[UPDATE] updates main table (3)");
+                        const allData6 = await db.dexieDB.listof_privilegios_of_usuario.toArray();
+                        assert.equal(Array.isArray(allData6), true, "[UPDATE] updates intermediate table (1)");
+                        assert.equal(allData6.length, 3, "[UPDATE] updates intermediate items (1)");
+                        const allData7 = await db.dexieDB.listof_grupos_of_usuario.toArray();
+                        assert.equal(Array.isArray(allData7), true, "[UPDATE] updates intermediate table (2)");
+                        assert.equal(allData7.length, 3, "[UPDATE] updates intermediate items (2)");
+
+                        const allUsers1 = await db.select("usuario", user => user.id === 2);
+                        const allUsers2 = await db.select("usuario", user => user.id === 1);
+                        const allUsers3 = await db.select("usuario");
+
+                        // @TEST: list relationships
+                        assert.equal(Array.isArray(allUsers1), true, "[SELECT] select returns an array");
+                        assert.equal(allUsers1.length, 1, "[SELECT] select can filter by function");
+                        assert.equal(allUsers1[0].nombre, "Carlos 3", "[SELECT] select returns normal properties");
+                        assert.equal(Array.isArray(allUsers1[0].privilegios), true, "[SELECT] select returns itermediate properties");
+                        assert.equal(Array.isArray(allUsers1[0].grupos), true, "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].privilegios.length, 3, "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].grupos.length, 3, "[SELECT] select returns intermediate properties");
+                        assert.equal(typeof allUsers1[0].privilegios[0], "object", "[SELECT] select returns intermediate properties");
+                        assert.equal(typeof allUsers1[0].grupos[0], "object", "[SELECT] select returns intermediate properties");
+                        console.log(allUsers1[0].privilegios);
+                        assert.equal(allUsers1[0].privilegios[0].item.nombre, "Bailar", "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].privilegios[1].item.nombre, "Correr", "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].privilegios[1].tipo, "Media maratón y apurao", "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].privilegios[2].item.nombre, "Gruñir", "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].grupos[0].item.nombre, "Hombres", "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].grupos[1].item.nombre, "Plantas", "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].grupos[2].item.nombre, "Humanos", "[SELECT] select returns intermediate properties");
+                        console.log(allUsers1[0]);
+                        assert.equal(typeof allUsers1[0].imagen, "object", "[SELECT] select returns intermediate properties");
+                        assert.equal(typeof allUsers1[0].imagen.nombre, "string", "[SELECT] select returns intermediate properties");
+                        assert.equal(allUsers1[0].imagen.nombre, "Otra imagen de Google", "[SELECT] select returns intermediate properties");
+
+                        // @TEST: list relationships
+                        assert.equal(Array.isArray(allUsers2), true, "[SELECT] select returns an array");
+                        assert.equal(allUsers2.length, 0, "[SELECT] select can filter by function");
+
+                        // @TEST: list relationships
+                        assert.equal(Array.isArray(allUsers3), true, "[SELECT] select returns an array");
+                        assert.equal(allUsers3.length, 1, "[SELECT] select can filter by function");
+
+                        window.superdatabase = db;
+
+                        finishTest();
+
+                    } catch (error) {
+                        console.log(typeof error);
+                        console.error(error);
+                        throw error;
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

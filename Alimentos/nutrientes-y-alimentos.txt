@@ -1,0 +1,565 @@
+1. Ácido fólico
+	Cacahuetes
+	Garbanzos
+	Espinacas
+	Brócoli
+	Hígado de ternera
+	Espárragos verdes
+	Semillas de girasol
+	Lechuga
+2. Ácido linoleico
+	Aceites de semillas de girasol
+	Aceites de semillas de maíz
+	Aceites de semillas de cártamo
+	Nueces
+	Anacardos
+	Piñones
+	Cereales
+	Huevos
+3. Arginina
+	Carne
+	Huevos
+	Guisantes y frijoles
+	Chocolate
+	Verduras
+	Frutas
+	Frutos secos
+	Arroz
+	Quinoa
+	Lácteos
+	Bebidas
+4. Bromelaína
+	Papaya
+	Mango
+	Miel
+	Aguacate
+	Kiwi
+	Kéfir
+5. Calcio
+	Queso manchego fresco
+	Sardinas en aceite
+	Almendras
+	Avellanas
+	Cigalas
+	Langostinos
+	Gambas
+	Queso de burgos
+	Yogur
+	Higos secos
+	Garbanzos
+	Natillas y flanes
+	Pistachos
+	Leche de vaca
+	Judias blancas
+	Habas secas
+	Almejas
+	Berberechos
+	Chirlas
+	Chocolate con leche
+	Batidos lácteos
+	Acelgas
+	Cardo
+	Espinacas
+	Puerro
+	Queso en porciones
+	Nueces
+	Dátiles
+	Pasas
+	Aceitunas
+	Requesón y cuajada
+	Lentejas
+	Huevo de gallinas
+	Bacalao
+	Pasteles y pastas
+	Sardinas
+	Alcachofas
+	Coles
+	Repollo
+	Judías verdes
+6. DHA o ácido docosahexaenoico
+	Nueces
+	Algas
+	Almendras
+	Huevo
+7. Fitoesteroles
+	Aceite de girasol
+	Aceite de semilla de soja
+	Aceite de oliva
+	Almendras
+	Alubias
+	Maíz
+	Trigo
+8. Flúor
+	Verduras y hortalizas
+	espinacas
+	Col
+	Lechugas
+	Brotes de soja
+	Té
+	Café
+	Pescados
+	Mariscos
+9. Glutamina
+	Salmón
+	Carne de res
+	Pescados
+	Huevos
+	Leche entera
+	Yogur
+	Soya
+	Maíz
+	Tofu
+	Garbanzos
+	Lentejas
+	Frijoles negros
+	Habas
+	Frijoles blancos
+	Guisantes
+	Arroz blanco
+	Remolacha
+	Espinacas
+	Repollo
+	Perejil
+10. Hierro
+	Espinacas
+	Carne de hígado y otros órganos
+	Legumbres
+	Carne roja
+	Semillas de calabaza
+	Quinua
+	Pavo
+	Brócoli
+	Tofu
+	Chocolate negro
+11. Leucina
+	Queso parmesano
+	Atún
+	Pollo
+	Semillas de calabaza
+	Soja
+	Carne de cerdo
+12. Magnesio
+	Avellanas
+	Germen de trigo
+	Soja en grano
+	Cacahuetes
+	Garbanzos
+	Judías blancas
+	Pistachos
+13. Omega 3
+	Atún
+	Caballa
+	Arenque
+	Sardinas
+	Gambas
+	Ostras
+	Mejillones
+	Pez espada
+	Nueces
+	Semillas de lino
+	Semillas de chía
+	Semillas de sésamo
+	Soja en grano
+	Almendras
+14. Potasio
+	Alcachofa
+	Plátano (banana)
+	Frijoles (de lima
+	Blancos al horno)
+	Carne de res
+	Molida
+	Remolachas
+	Crudas o cocidas
+	Brócoli
+	Coles de bruselas
+	Melón cantalupo
+	Almejas
+	Enlatadas
+	Dátiles
+	Frijoles y arvejas secos
+	Pescado (eglefino
+	Perca
+	Salmón)
+	Papas fritas
+	Lentejas
+	Leche (descremada
+	Semidescremada
+	Entera
+	Suero de mantequilla)
+	Nectarina
+	Frutos secos (almendras
+	Acajú
+	Avellanas
+	Cacahuates [maníes])
+	Naranja
+	Jugo de naranja
+	Chirivía
+	Papa
+	Al horno
+	Papas fritas de bolsa
+	Comunes
+	Con sal
+	Ciruelas pasas
+	Calabaza
+	En lata
+	Uvas pasas
+	Sin semilla
+	Semillas (girasol
+	Calabaza)
+	Espinacas
+	Camote (batata)
+	Al horno
+	Tomates
+	En lata
+	Tomate
+	Fresco
+	Pavo
+	Jugo de verduras
+	Calabaza de invierno
+	Yogur
+	Sin sabor
+	Calabacín
+15. Prebióticos
+	Legumbres
+	Patata y boniato (rafinosa y estaquiosa)
+	Ajo
+	Cebolla y puerro (derivados de inulina y fructooligosacáridos)
+	Trigo
+	Avena y cebada (inulina)
+	Espárrago (fructooligosacáridos)
+16. Probióticos
+	Chuckrut
+	Kéfir
+	Kimchi
+	Microalgas
+	Vinagre de manzana
+	Miso
+	Té kombucha
+	Tempeh
+	Yogur
+	Queso
+	Leche
+17. Q10
+	Arenques
+	Carne de pollos de corral
+	Trucha
+	Semillas de sésamo
+	Pistachos
+	Brócoli
+	Coliflor
+	Naranjas
+	Fresas
+	Huevos de la cría de animales
+	Sardinas
+	Caballa
+18. Resveratrol
+	Frutos secos
+	Arándanos y otros frutos del bosque
+	Chocolate negro
+19. Sodio
+	Conservas de pescado
+	Mariscos
+	Charcutería
+	Despojos
+	Jamón
+	Huevo
+	Todos los quesos
+	Pan
+	Tostadas
+	Pastelería
+	Galletas
+	Aceitunas
+	Col
+	Acelgas
+	Acedera
+	Espinacas
+	Apio
+	Berro
+	Conservas de hortalizas
+	Mostaza
+	Pepinillos
+	Aguas gasificadas
+20. Triptófano
+	Pavo
+	Pollo
+	Pescados azules
+	Lácteos
+	Frutos secos
+	Plátano
+	Aguacate
+	Cereales
+21. Vitamina A
+	Sésamo
+	Calabaza
+	Girasol
+	Legumbres
+	Lentejas
+	Judías
+	Garbanzos
+22. Vitamina B1
+	Mantequilla de ajonjolí (Tahini)
+	Semillas de girasol
+	Especias y hierbas secas
+	Piñones
+	Chuleta de cerdo
+	Pistachos
+	Nueces de macadamia
+	Pescado
+	Pacanas
+	Productos integrales
+	pan
+	Cereales
+	Arroz
+	Pasta y harina
+	Germen de trigo
+	Carne de res y carne de cerdo
+	Trucha y atún de aleta azul
+	Huevos
+	Legumbres y guisantes
+	Nueces y semillas
+23. Vitamina B12
+	Hígado de cerdo
+	Riñones de cordero
+	Carne de vacuno
+	Carne de cordero
+	Almejas
+	Caballa
+	Sardinas
+	Arenques
+	Salmón
+	Quesos
+	Huevo
+24. Vitamina B2
+	Foie-gras y patés
+	Quesos roquefort y cabrales
+	Almendras
+	Champiñones y setas
+	Sardinas
+	Queso gruyere y emmental
+	Huevo de gallina
+	Queso de bola
+	Burgos
+	Manchego
+	Chocolate con leche
+	Yogur entero
+	Lomo embuchado
+	Lentejas
+	Carne de vaca
+	Jamón serrano
+	Natillas y flanes
+	Maíz
+	Carne de cerdo
+	Salchichas
+	Espinacas
+	Leche de vaca
+	Jamón cocido
+	Chocolate
+	Cordero
+	Chuletas de vacuno
+	Lubina
+	Salmón
+	Centollo
+	Pollo y gallina
+	Guisantes verdes
+	Garbanzos
+25. Vitamina B3
+	Atún y bonito
+	Pollo
+	Jamón serrano
+	Bacalao
+	Salmón
+	Cordero
+	Salchichón
+	Jamón cocido
+	Carne magra de cerdo
+	Puré de patata
+	Chuletas de cerdo
+	Cigalas
+	Langostinos
+	Gambas
+	Chuletas de vacuno
+	Foie-gras y patés
+	Rape
+	Pescadilla y merluza
+	Mollejas
+	Perdiz
+	Queso manchego semicurado
+	Lubina
+	Hamburguesas
+	Sardinas
+	Queso cabrales
+	Queso roquefort
+	Centollo
+	Queso gruyere
+	Queso emmental
+	Cabrito
+	Merluza
+26. Vitamina B5
+	Arroz y salvado de trigo
+	Frutos secos
+	Huevos
+	Garbanzos
+	Setas
+	Lácteos
+	Pescados
+	Especialmente el salmón
+	Aguacates
+	Carne de pavo
+	Chorizo y carne de ternera
+	Cereales
+	Especialmente avena
+	Tomates secos
+	Mantequilla de cacahuete o copos de avena
+27. Vitamina B6
+	Germen de trigo
+	Salmón cocido
+	Pollo cocido
+	Banana
+	Avellana
+	Sardinas
+	Salmón
+	Langosta
+	Bogavante
+	Nueces
+	Lentejas
+	Lenguado
+	Judías blancas
+	Garbanzos
+	Hígado
+	Plátano
+	Pollo y gallina
+	Atún
+	Bonito
+	Besugo
+	Trucha
+	Carne magra de cerdo
+	Morcilla
+	Aguacate
+	Maíz
+	Jamón cocido
+	Bacon
+	Castañas
+	Carne de vacuno
+	Ajo
+	Arroz
+	Pasas
+	Chuleta de cerdo
+	Carne picada
+	Judías verdes
+	Puerros
+	Pistachos
+	Patatas
+	Foie-gras y patés
+	Ciruelas secas
+	Jamón serrano
+	Coliflor
+	Espinacas
+	Nueces
+	Castañas
+	Papa asada en el horno
+	Camarón cocido
+	Carne de res
+	Col de bruselas
+	Aguacate
+	Cacahuates o maní
+	Zanahoria cocida
+	Jugo de ciruela
+	Lentejas
+	Espinaca cruda
+	Jugo de tomate
+	Sandía
+28. Vitamina B8
+	Productos lácteos
+	Setas y verduras
+	Huevos
+	Pescados
+	Legumbres
+	Cereales integrales
+	Levadura
+	Repollo
+	Brócoli
+	Patata
+	Batata
+29. Vitamina C
+	Guayaba
+	Perejil
+	Pimiento
+	Coles de bruselas
+	Kiwi
+	Limón
+	Naranja
+	Pomelo
+	Toronja
+	Brócoli
+	Hinojo
+	Papaya
+	Fresas
+	Melón
+	Papas horneadas
+	Tomates
+30. Vitamina E
+	Almendras
+	Avellanas
+	Piñones
+	Cacahuetes
+	Pescado
+	Pistachos
+	Aguacate
+	Espinacas
+	Espárragos
+	Brócoli
+31. Vitamina K
+	Apio
+	Okra
+	Arándanos
+	Salvia seca
+	Col rizada
+	Repollo
+	Moras
+	Espinaca
+	Brócoli
+	Cebolletas
+	Coles de bruselas
+	Pepinillos
+	Ciruelas pasas
+	Chile en polvo
+	Espárragos
+	Zanahorias
+	Frambuesas
+32. Yodo
+	Sal yodada
+	Algas marinas
+	Arándanos
+	Caballa
+	Mejillón
+	Atún
+	Pollo
+	Alubias blancas
+	Camarones y gambas
+	Langosta y bogavante
+	Fresas
+	Patatas
+	Quesos
+	Anacardos
+	Brócoli
+	Salmón
+	Avena
+	Ostras
+	Cacahuetes
+	Manzana
+	Pan de centeno
+	Espinacas
+	Ajo
+	Huevos
+	Ternera
+	Judías verdes
+33. Zinc
+	Chocolate negro
+	Arroz integral
+	Huevos
+	Cangrejo
+	Ostras
+	Carne de res
+	Semillas de calabaza
+	Cacahuetes
+	Semillas de sandía

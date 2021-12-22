@@ -1,0 +1,56 @@
+{
+    "globals": {
+        "DatabaseHost": "127.0.0.1",
+        "DatabasePort": 3306,
+        "DatabasePassword": "toor",
+        "DatabaseUser": "root"
+    },
+    "schema": {
+        "tables": {
+            "usuario": {
+                "columns": {
+                    "nombre": {
+                        "type": "string",
+                        "label": "Nombre de usuario:"
+                    },
+                    "grupos": {
+                        "type": "list:grupo",
+                        "label": "Grupos a los que pertenece:"
+                    },
+                    "privilegios": {
+                        "type": "list:privilegio",
+                        "label": "Privilegios específicos del usuario:"
+                    }
+                }
+            },
+            "grupo": {
+                "columns": {
+                    "nombre": {
+                        "type": "string",
+                        "label": "Nombre de grupo:"
+                    },
+                    "privilegios": {
+                        "type": "list:privilegio",
+                        "label": "Privilegios específicos del usuario:"
+                    },
+                    "descripcion": {
+                        "type": "text",
+                        "label": "Descripción del grupo:"
+                    }
+                }
+            },
+            "privilegio": {
+                "columns": {
+                    "nombre": {
+                        "type": "string",
+                        "label": "Nombre de privilegio:"
+                    },
+                    "descripcion": {
+                        "type": "text",
+                        "label": "Descripción del privilegio:"
+                    }
+                }
+            }
+        }
+    }
+}
